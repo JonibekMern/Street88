@@ -1,0 +1,325 @@
+@import "font.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+body {
+  background: #0c0c0c;
+  font-family: "Raleway";
+  font-weight: 400;
+  font-style: normal;
+}
+img {
+  vertical-align: middle;
+}
+.burger-btn {
+  width: 40px;
+  height: 40px;
+  background-color: #0c0c0c;
+  border: none;
+  outline: none;
+  position: relative;
+  display: none;
+}
+.burger-span {
+  display: inline-block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  left: 5px;
+  transition: transform 0.3s ease;
+}
+.burger-span:first-child {
+  transform: translateY(-10px);
+}
+.burger-span:last-child {
+  transform: translateY(10px);
+}
+.burger-btn:focus .burger-span:first-child {
+  transform: translateY(0) rotate(45deg);
+}
+.burger-btn:focus .burger-span:last-child {
+  transform: translateY(0) rotate(-45deg);
+}
+.burger-btn:focus .burger-span:nth-child(2) {
+  opacity: 0;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+.header-top,
+.header-bottom-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-top {
+  padding: 20px 0;
+}
+.header-top-loc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.header-top-loc-text,
+.nav-link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.header-bottom {
+  border-top: 1px solid rgba(125, 115, 115, 0.5);
+  border-bottom: 1px solid rgba(125, 115, 115, 0.5);
+}
+.header-bottom-logo {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+
+  background: rgba(10, 148, 24, 0.75);
+  border: 4px solid #06600f;
+  border-radius: 4px;
+  padding: 12px 18px;
+}
+.header-bottom-nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-bottom-nav-link {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 23px 15px;
+  transition: 0.2s ease;
+}
+.header-bottom-nav-link:hover {
+  background: rgba(105, 207, 23, 0.75);
+}
+.hero {
+  width: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba(12, 12, 12, 0.72),
+      rgba(12, 12, 12, 0.72)
+    ),
+    url(../img/hero-bg.png);
+  background-size: cover;
+
+  padding: 170px 0 180px;
+  margin-bottom: 50px;
+}
+.hero-title {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 85px;
+  color: #69cf17;
+
+  margin-bottom: 18px;
+}
+.hero-pre {
+  font-size: 36px;
+  line-height: 17px;
+  color: #69cf17;
+
+  margin-bottom: 18px;
+}
+.hero-desc {
+  font-size: 18px;
+  line-height: 24px;
+
+  margin-bottom: 30px;
+}
+.hero-link-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-link-content-price {
+  font-weight: 100;
+  font-size: 50px;
+  line-height: 25px;
+  background: rgba(105, 207, 23, 0.5);
+  backdrop-filter: blur(5px);
+
+  padding: 33px 76px;
+}
+.hero-link-content-link {
+  font-size: 18px;
+  line-height: 21px;
+  background: linear-gradient(90deg, #69cf17 0%, #417d11 100%);
+  border-radius: 6px;
+
+  padding: 15px 70px;
+}
+.burger {
+  background: #292929;
+  box-shadow: 0px 1px 8px rgba(17, 17, 17, 0.3);
+  margin-bottom: 50px;
+}
+.burger-list {
+  display: flex;
+  align-items: center;
+}
+.burger-link {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 20px;
+}
+.burger-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  transform: translateX(-1000px);
+  height: 1px;
+  background-color: #fff;
+  display: none;
+}
+.burger-link:hover::after {
+  width: 100%;
+  display: block;
+  transform: translateX(0);
+}
+.burger-card {
+  width: 100%;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 370px);
+  justify-content: center;
+  gap: 30px;
+
+  background-color: #353535;
+}
+.burger-card-item {
+  min-height: 524px;
+  padding: 15px;
+  background: #0c0c0c;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+}
+.burger-card-item-img {
+  margin-bottom: 15px;
+}
+.burger-card-item-title {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 15px;
+
+  margin-bottom: 15px;
+}
+.burger-card-item-title-desc {
+  font-size: 19px;
+  line-height: 25px;
+}
+.branches {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background-color: #fff;
+}
+.branches-title {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 40px;
+  color: #69cf17;
+
+  padding: 20px;
+}
+iframe {
+  width: 100%;
+}
+.footer {
+  background: linear-gradient(180deg, #000000 0%, rgba(105, 207, 23, 0.5) 100%);
+}
+.footer-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+
+  margin-bottom: 80px;
+}
+.footer-top-logo {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 30px;
+  text-align: center;
+  padding: 12px 18px;
+
+  background: rgba(10, 148, 24, 0.75);
+  border: 4px solid #06600f;
+  border-radius: 4px;
+}
+.footer-top-tel {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+}
+.footer-mid,
+.footer-mid-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-mid-list {
+  gap: 20px;
+  margin-bottom: 80px;
+}
+.footer-mid-link {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+}
+.footer-bottom {
+  padding: 20px;
+  background: #1a3406;
+}
+.footer-bottom-link {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}

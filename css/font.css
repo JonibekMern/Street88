@@ -1,0 +1,32 @@
+/* Railway font family */
+@font-face {
+  font-family: "Raleway";
+  src: url(../font/Raleway/Raleway-Black.ttf);
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(../font/Raleway/Raleway-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(../font/Raleway/Raleway-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(../font/Raleway/Raleway-Thin.ttf);
+  font-weight: 100;
+}
+/* Roboto font family */
+@font-face {
+  font-family: "Roboto";
+  src: url(../font/Roboto/Roboto-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../font/Roboto/Roboto-Regular.ttf);
+  font-weight: 400;
+}
